@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './Header';
+import Header from './header';
 import IsLoadingAndError from './IsLoadingAndError';
-import Footer from './Footer';
+import Footer from './footer';
 import {
   BrowserRouter as Router,
   Switch,
