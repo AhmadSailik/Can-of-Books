@@ -7,11 +7,9 @@ class Profile extends Component {
     console.log(user);
     return (
       <>  
+  {isAuthenticated && <img src={user.picture} alt={user.nickname}/>}
   {isAuthenticated && <div>Hello {user.name}</div>}
   {isAuthenticated && <div>Email: {user.email}</div>}
-  {isAuthenticated && <div><img src={user.picture}/></div>}
-  
- 
       </>
     )
     

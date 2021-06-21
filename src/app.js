@@ -1,6 +1,5 @@
 import React from 'react';
 import Header from './header';
-import IsLoadingAndError from './IsLoadingAndError';
 import Footer from './footer';
 import {
   BrowserRouter as Router,
@@ -10,9 +9,13 @@ import {
 import Login from './login';
 import MyFavoriteBooks from './myFavoriteBooks';
 import Profile from './profile'
-import LoginButton from './loginButton'
 import {withAuth0} from '@auth0/auth0-react'
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 class App extends React.Component {
+
+
+
 
   render() {
     console.log('app', this.props)
