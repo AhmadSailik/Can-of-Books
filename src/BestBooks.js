@@ -12,7 +12,7 @@ class BestBooks extends React.Component {
         try {
             const bookURL = await fetch(`http://localhost:3001/books?email=${user.email}`)
             const resultOfBookURl = await bookURL.json();
-            // console.log(resultOfBookURl)
+            console.log(resultOfBookURl )
             this.setState({
                 data: resultOfBookURl
             })
@@ -22,6 +22,7 @@ class BestBooks extends React.Component {
     }
 
     render() {
+        console.log('After')
         const { data } = this.state
         return (
             <div>
@@ -29,7 +30,7 @@ class BestBooks extends React.Component {
                     <Row>
                         <Col>
                             <Carousel style={{ width: '35rem' }}>
-                                {data.map((item) => {
+                                {this.state.data.map((item) => {
                                     return (
                                         <Carousel.Item interval={1000}>
                                             <img
